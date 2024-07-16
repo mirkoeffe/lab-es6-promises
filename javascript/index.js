@@ -79,10 +79,9 @@ obtainInstruction('steak', 0)
   })
   .then((step6) => {
     document.querySelector('#steak').innerHTML += `<li>${step6}</li>`;
-    return obtainInstruction('steak', 7);
+    return document.querySelector('#steak').innerHTML += `<li>Stake is ready!</li>`;
   })
-  .then((step7) => {
-    document.querySelector('#steak').innerHTML += `<li>Stake is ready!</li>`;
+  .then(() => {
     document.querySelector('#steakImg').removeAttribute("hidden");
   })
 
